@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>JavaScript Social Media Platform</title>
+
+  </head>
+
+  <body>
+
+    <h1>JavaScript Social Media Platform</h1>
+
+    <form>
+
+      <textarea id="postInput" rows="5" cols="50"></textarea><br>
+
+      <button id="postButton">Post</button>
+
+    </form>
+
+    <div id="posts"></div>
+
+    
+
+    <script>
+
+      // Get references to the post input and post button elements
+
+      const postInput = document.getElementById("postInput");
+
+      const postButton = document.getElementById("postButton");
+
+      const postsContainer = document.getElementById("posts");
+
+      
+
+      // Add an event listener to the post button
+
+      postButton.addEventListener("click", function() {
+
+        // Get the value of the post input
+
+        const postValue = postInput.value;
+
+        
+
+        // Create a new div element to hold the post
+
+        const newPost = document.createElement("div");
+
+        
+
+        // Set the innerHTML of the new div to the post value
+
+        newPost.innerHTML = postValue;
+
+        
+
+        // Append the new div to the posts container
+
+        postsContainer.appendChild(newPost);
+
+        
+
+        // Clear the post input
+
+        postInput.value = "";
+
+      });
+
+    </script>
+
+  </body>
+
+</html>
+
